@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "126413c5-74e9-493e-9539-519c3d2b94f1",
+		"name": "COURSE BOOKING API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24050885"
+	},
+	"item": [
+		{
+			"name": "CHECK EMAIL-POST METHOD",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "USER REGISTRATION-POST METHOD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fistName\" : \"John\",\r\n    \"lastName\" : \"Smith\",\r\n    \"email\" : \"john@mail.com\",\r\n    \"mobileNo\" : \"09123456789\",\r\n    \"password\" : \"john1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER LOGIN-POST METHOD",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER DETAIL-POST METHOD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"635b90a198bf011528e8d350\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "locahost:4000/users/details",
+					"host": [
+						"locahost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
