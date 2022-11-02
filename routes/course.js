@@ -15,7 +15,13 @@ Activity
 
 */
 router.post("/create", auth.verify, (req, res) => {
-	courseController.addCourse(req.body).then(resultFromController => {
+	// Always paired with auth.verify
+	const data = {
+		course: req.body,
+		isAdmin: auth.decode(req.headers.authorization).isAdmin
+	}
+
+	courseController.addCourse(data).then(resultFromController => {
 		res.send(resultFromController)
 	})
 })

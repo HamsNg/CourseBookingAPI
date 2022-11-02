@@ -7,6 +7,67 @@
 	},
 	"item": [
 		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get user details from token",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "htttp://localhost:4000/users/details",
+							"protocol": "htttp",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "add new course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\" : \"Web Developing\",\r\n \"description\" : \"Web Development Lessons\",\r\n \"price\" : 50000   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/courses/create",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"courses",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "CHECK EMAIL-POST METHOD",
 			"request": {
 				"method": "POST",
