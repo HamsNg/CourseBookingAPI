@@ -12,7 +12,7 @@ const courseSchema = new mongoose.Schema({
 	price: {
 		type: Number,
 		required: [true, "Price is required"]
-	}
+	},
 	isActive: {
 		type: Boolean,
 		default: true

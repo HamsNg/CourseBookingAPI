@@ -34,6 +34,7 @@ module.exports.loginUser = (reqBody) => {
 	return User.findOne({email : reqBody.email}).then(result => {
 		if(result == null){
 			return false;
+
 		}else{
 			const isPasswordCorrect = bcrypt.compareSync(reqBody.password, result.password);
 			if(isPasswordCorrect){
